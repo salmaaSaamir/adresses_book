@@ -1,0 +1,53 @@
+@if(IsSpinner){
+<app-loader></app-loader>
+
+}@else {
+<section class="container auth-container">
+    <div class="login-container">
+        <div class="circle circle-one"></div>
+
+        <div class="form-container">
+            <img src="https://raw.githubusercontent.com/hicodersofficial/glassmorphism-login-form/master/assets/illustration.png"
+                alt="illustration" class="illustration" />
+
+            <h1 class="opacity">LOGIN</h1>
+
+            <form (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm" novalidate>
+
+                <!-- Email -->
+                <input type="email" placeholder="EMAIL" [(ngModel)]="model.Email" name="email" required #email="ngModel"
+                    email />
+                <div *ngIf="(email.invalid && (email.touched || loginForm.submitted))" class="text-danger">
+                    <span *ngIf="email.errors?.['required']">Email is required.</span>
+                    <span *ngIf="email.errors?.['email']">Please enter a valid email.</span>
+                </div>
+
+                <!-- Password -->
+                <div class="position-relative password-container">
+                    <input [type]="passwordVisible ? 'text' : 'password'" placeholder="PASSWORD"
+                        [(ngModel)]="model.Password" name="password" required minlength="6" #password="ngModel" />
+                    <i class="bi fw-bold fs-4 eye-icon" [ngClass]="passwordVisible ? 'bi-eye-slash' : 'bi-eye'"
+                        (click)="togglePassword()"></i>
+                </div>
+                <div *ngIf="password.invalid && (password.touched || loginForm.submitted)" class="text-danger">
+                    <span *ngIf="password.errors?.['required']">Password is required.</span>
+                    <span *ngIf="password.errors?.['minlength']">Password must be at least 6 characters.</span>
+                </div>
+                <!-- Remmeber Me -->
+                <label class="d-flex align-items-center">
+                    <input type="checkbox" class="check-label" name="IsRememberMe" [(ngModel)]="model.IsRememberMe" />
+                    Remember Me
+                </label>
+                <!-- Submit -->
+                <button type="submit" class="opacity" [disabled]="loginForm.invalid">SUBMIT</button>
+            </form>
+
+            <div class="register w-100" routerLink="/register">
+                <a class="text-dark">REGISTER</a>
+            </div>
+        </div>
+
+        <div class="circle circle-two"></div>
+    </div>
+</section>
+}

@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  text-transform: capitalize;
+
+}
+
+body {
+  font-family: "Math", sans-serif;
+  background: #101d2c;
+  color: #ffffff;
+  letter-spacing: 1px;
+  transition: background 0.2s ease;
+}
+.text-primary{
+    color: #ffc665 !important;
+}
+img{
+  object-fit: cover;
+}

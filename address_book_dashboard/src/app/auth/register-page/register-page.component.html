@@ -1,0 +1,44 @@
+<section class="container">
+  <div class="login-container">
+    <div class="circle circle-one"></div>
+
+    <div class="form-container">
+      <img
+        src="https://raw.githubusercontent.com/hicodersofficial/glassmorphism-login-form/master/assets/illustration.png"
+        alt="illustration" class="illustration" />
+
+      <h1 class="opacity">REGISTER</h1>
+
+      <form (ngSubmit)="onSubmit(registerForm)" #registerForm="ngForm">
+        <!-- Email -->
+        <input type="email" placeholder="EMAIL" [(ngModel)]="model.Email" name="email" required email
+          #email="ngModel" />
+        <div *ngIf="email.invalid && email.touched" class="text-danger">
+          Please enter a valid email
+        </div>
+
+        <!-- Password -->
+        <div class="position-relative password-container">
+          <input [type]="passwordVisible ? 'text' : 'password'" placeholder="PASSWORD" [(ngModel)]="model.Password"
+            name="password" required minlength="6" #password="ngModel" />
+          <i class="bi eye-icon fw-bold fs-4" [ngClass]="passwordVisible ? 'bi-eye-slash' : 'bi-eye'"
+            (click)="togglePassword()"></i>
+        </div>
+        <div *ngIf="password.invalid && password.touched" class="text-danger">
+          Password is required (min 6 characters)
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="opacity" [disabled]="registerForm.invalid">
+          SUBMIT
+        </button>
+      </form>
+
+      <div class="register w-100" routerLink="/login">
+        <a class="text-dark">Have Account</a>
+      </div>
+    </div>
+
+    <div class="circle circle-two"></div>
+  </div>
+</section>

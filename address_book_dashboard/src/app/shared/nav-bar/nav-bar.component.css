@@ -1,0 +1,19 @@
+.nav-link {
+  position: relative;
+  color: #fff;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -ms-transition: all 0.25s;
+  -o-transition: all 0.25s;
+}
+.nav-link:hover {
+ color: #ffc665 !important;
+  box-shadow: inset 0 -2px 0 #ffc665;
+  border-radius: 10px;
+}
+.nav-link.active {
+  color: #ffc665 !important;
+  box-shadow: inset 0 -2px 0 #ffc665;
+  border-radius: 10px;
+}
