@@ -39,7 +39,6 @@ export class LoginPageComponent {
     try {
       this.IsSpinner = true;
       const response: any = await lastValueFrom(this.authService.login(this.model));
-
       if (response.State) {
         this.toastr.success('Login Successful');
 

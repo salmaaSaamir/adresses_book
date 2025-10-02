@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   backApiUrl: 'https://localhost:7061/api/',
+  ImagesApiUrl: 'https://localhost:7061'
 };
 
 /*

@@ -60,4 +60,18 @@ namespace adress_book_back.Models
             return age;
         }
     }
+
+    public class AddressDto
+    {
+        public int Id { get; set; }
+        public string FullName { get; set; }
+        public string AddressLine { get; set; }
+        public string Email { get; set; }
+        public string MobileNumber { get; set; }
+        public int Age { get; set; }
+        public string JobName { get; set; }
+        public string DepartmentName { get; set; }
+        public DateTime DateOfBirth { get; set; }
+    }
+
 }

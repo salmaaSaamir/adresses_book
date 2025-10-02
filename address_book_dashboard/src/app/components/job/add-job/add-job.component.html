@@ -1,1 +1,42 @@
-<p>add-job works!</p>
+<!-- Loader -->
+@if(isSpinner){
+  <app-loader></app-loader>
+}@else{
+  <!-- Modal -->
+  <div class="modal fade " id="addJobModal" tabindex="-1" aria-labelledby="addJobModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content border-0 rounded-4 shadow-sm">
+
+        <div class="modal-header d-flex justify-content-between bg-dark text-white">
+          <h5 class="modal-title" id="addJobModalLabel">
+            {{ form.get('Id')?.value ? 'Edit Job' : 'Add Job' }}
+          </h5>
+          <button type="button" class="btn-close bg-light" aria-label="Close" (click)="cancel()"></button>
+        </div>
+
+        <div class="modal-body bg-dark text-white">
+          <form [formGroup]="form" (ngSubmit)="save()">
+
+            <!-- Name -->
+            <div class="mb-3">
+              <label>Name <span class="text-danger">*</span></label>
+              <input type="text"  formControlName="Name" placeholder="Enter job name" />
+              <div *ngIf="form.get('Name')?.invalid && form.get('Name')?.touched" class="text-danger fs-5 mx-2">
+                <small *ngIf="form.get('Name')?.errors?.['required']">Name is required</small>
+                <small *ngIf="form.get('Name')?.errors?.['minlength']">Minimum 2 characters</small>
+              </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="d-flex justify-content-end gap-3 mt-3">
+              <button type="button" class="btn btn-secondary" (click)="cancel()">Cancel</button>
+              <button type="submit" class="btn btn-info" [disabled]="form.invalid">Save</button>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+}

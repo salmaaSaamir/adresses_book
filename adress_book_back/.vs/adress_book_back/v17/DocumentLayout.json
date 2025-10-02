@@ -1,7 +1,60 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\3Pillars_task\\adress_book_back\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D0F941BC-00C2-4601-B2D9-CE18A234DC49}|adress_book_back\\adress_book_back.csproj|e:\\3pillars_task\\adress_book_back\\adress_book_back\\services\\adressservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0F941BC-00C2-4601-B2D9-CE18A234DC49}|adress_book_back\\adress_book_back.csproj|solutionrelative:adress_book_back\\services\\adressservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0F941BC-00C2-4601-B2D9-CE18A234DC49}|adress_book_back\\adress_book_back.csproj|e:\\3pillars_task\\adress_book_back\\adress_book_back\\services\\jobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0F941BC-00C2-4601-B2D9-CE18A234DC49}|adress_book_back\\adress_book_back.csproj|solutionrelative:adress_book_back\\services\\jobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0F941BC-00C2-4601-B2D9-CE18A234DC49}|adress_book_back\\adress_book_back.csproj|e:\\3pillars_task\\adress_book_back\\adress_book_back\\services\\departmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0F941BC-00C2-4601-B2D9-CE18A234DC49}|adress_book_back\\adress_book_back.csproj|solutionrelative:adress_book_back\\services\\departmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0F941BC-00C2-4601-B2D9-CE18A234DC49}|adress_book_back\\adress_book_back.csproj|e:\\3pillars_task\\adress_book_back\\adress_book_back\\services\\imagehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0F941BC-00C2-4601-B2D9-CE18A234DC49}|adress_book_back\\adress_book_back.csproj|solutionrelative:adress_book_back\\services\\imagehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0F941BC-00C2-4601-B2D9-CE18A234DC49}|adress_book_back\\adress_book_back.csproj|e:\\3pillars_task\\adress_book_back\\adress_book_back\\models\\adress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0F941BC-00C2-4601-B2D9-CE18A234DC49}|adress_book_back\\adress_book_back.csproj|solutionrelative:adress_book_back\\models\\adress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0F941BC-00C2-4601-B2D9-CE18A234DC49}|adress_book_back\\adress_book_back.csproj|e:\\3pillars_task\\adress_book_back\\adress_book_back\\controllers\\adressescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0F941BC-00C2-4601-B2D9-CE18A234DC49}|adress_book_back\\adress_book_back.csproj|solutionrelative:adress_book_back\\controllers\\adressescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0F941BC-00C2-4601-B2D9-CE18A234DC49}|adress_book_back\\adress_book_back.csproj|e:\\3pillars_task\\adress_book_back\\adress_book_back\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0F941BC-00C2-4601-B2D9-CE18A234DC49}|adress_book_back\\adress_book_back.csproj|solutionrelative:adress_book_back\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\3Pillars_task\\adress_book_back\\adress_book_back\\Migrations\\20251002123107_add-addresses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:adress_book_back\\Migrations\\20251002123107_add-addresses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0F941BC-00C2-4601-B2D9-CE18A234DC49}|adress_book_back\\adress_book_back.csproj|e:\\3pillars_task\\adress_book_back\\adress_book_back\\controllers\\jobscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0F941BC-00C2-4601-B2D9-CE18A234DC49}|adress_book_back\\adress_book_back.csproj|solutionrelative:adress_book_back\\controllers\\jobscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0F941BC-00C2-4601-B2D9-CE18A234DC49}|adress_book_back\\adress_book_back.csproj|e:\\3pillars_task\\adress_book_back\\adress_book_back\\interfaces\\iadressservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0F941BC-00C2-4601-B2D9-CE18A234DC49}|adress_book_back\\adress_book_back.csproj|solutionrelative:adress_book_back\\interfaces\\iadressservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0F941BC-00C2-4601-B2D9-CE18A234DC49}|adress_book_back\\adress_book_back.csproj|e:\\3pillars_task\\adress_book_back\\adress_book_back\\interfaces\\ijobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0F941BC-00C2-4601-B2D9-CE18A234DC49}|adress_book_back\\adress_book_back.csproj|solutionrelative:adress_book_back\\interfaces\\ijobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0F941BC-00C2-4601-B2D9-CE18A234DC49}|adress_book_back\\adress_book_back.csproj|e:\\3pillars_task\\adress_book_back\\adress_book_back\\context\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0F941BC-00C2-4601-B2D9-CE18A234DC49}|adress_book_back\\adress_book_back.csproj|solutionrelative:adress_book_back\\context\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0F941BC-00C2-4601-B2D9-CE18A234DC49}|adress_book_back\\adress_book_back.csproj|e:\\3pillars_task\\adress_book_back\\adress_book_back\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0F941BC-00C2-4601-B2D9-CE18A234DC49}|adress_book_back\\adress_book_back.csproj|solutionrelative:adress_book_back\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +62,180 @@
       "DocumentGroups": [
         {
           "DockedWidth": 71,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IAdressService.cs",
+              "DocumentMoniker": "E:\\3Pillars_task\\adress_book_back\\adress_book_back\\Interfaces\\IAdressService.cs",
+              "RelativeDocumentMoniker": "adress_book_back\\Interfaces\\IAdressService.cs",
+              "ToolTip": "E:\\3Pillars_task\\adress_book_back\\adress_book_back\\Interfaces\\IAdressService.cs",
+              "RelativeToolTip": "adress_book_back\\Interfaces\\IAdressService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T12:27:19.454Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IJobService.cs",
+              "DocumentMoniker": "E:\\3Pillars_task\\adress_book_back\\adress_book_back\\Interfaces\\IJobService.cs",
+              "RelativeDocumentMoniker": "adress_book_back\\Interfaces\\IJobService.cs",
+              "ToolTip": "E:\\3Pillars_task\\adress_book_back\\adress_book_back\\Interfaces\\IJobService.cs",
+              "RelativeToolTip": "adress_book_back\\Interfaces\\IJobService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T12:27:01.728Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Adress.cs",
+              "DocumentMoniker": "E:\\3Pillars_task\\adress_book_back\\adress_book_back\\Models\\Adress.cs",
+              "RelativeDocumentMoniker": "adress_book_back\\Models\\Adress.cs",
+              "ToolTip": "E:\\3Pillars_task\\adress_book_back\\adress_book_back\\Models\\Adress.cs",
+              "RelativeToolTip": "adress_book_back\\Models\\Adress.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAiwEoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T12:25:18.174Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DBContext.cs",
+              "DocumentMoniker": "E:\\3Pillars_task\\adress_book_back\\adress_book_back\\Context\\DBContext.cs",
+              "RelativeDocumentMoniker": "adress_book_back\\Context\\DBContext.cs",
+              "ToolTip": "E:\\3Pillars_task\\adress_book_back\\adress_book_back\\Context\\DBContext.cs",
+              "RelativeToolTip": "adress_book_back\\Context\\DBContext.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAQwBwAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T12:25:12.102Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AdressService.cs",
+              "DocumentMoniker": "E:\\3Pillars_task\\adress_book_back\\adress_book_back\\Services\\AdressService.cs",
+              "RelativeDocumentMoniker": "adress_book_back\\Services\\AdressService.cs",
+              "ToolTip": "E:\\3Pillars_task\\adress_book_back\\adress_book_back\\Services\\AdressService.cs",
+              "RelativeToolTip": "adress_book_back\\Services\\AdressService.cs",
+              "ViewState": "AQIAAGYAAAAAAAAAAAAkwG4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T12:24:07.078Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\3Pillars_task\\adress_book_back\\adress_book_back\\Program.cs",
+              "RelativeDocumentMoniker": "adress_book_back\\Program.cs",
+              "ToolTip": "E:\\3Pillars_task\\adress_book_back\\adress_book_back\\Program.cs",
+              "RelativeToolTip": "adress_book_back\\Program.cs",
+              "ViewState": "AQIAAEoAAAAAAAAAAAAAAF0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T12:30:22.133Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "JobService.cs",
+              "DocumentMoniker": "E:\\3Pillars_task\\adress_book_back\\adress_book_back\\Services\\JobService.cs",
+              "RelativeDocumentMoniker": "adress_book_back\\Services\\JobService.cs",
+              "ToolTip": "E:\\3Pillars_task\\adress_book_back\\adress_book_back\\Services\\JobService.cs",
+              "RelativeToolTip": "adress_book_back\\Services\\JobService.cs",
+              "ViewState": "AQIAADYAAAAAAAAAAAAkwEcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T17:35:09.609Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DepartmentService.cs",
+              "DocumentMoniker": "E:\\3Pillars_task\\adress_book_back\\adress_book_back\\Services\\DepartmentService.cs",
+              "RelativeDocumentMoniker": "adress_book_back\\Services\\DepartmentService.cs",
+              "ToolTip": "E:\\3Pillars_task\\adress_book_back\\adress_book_back\\Services\\DepartmentService.cs",
+              "RelativeToolTip": "adress_book_back\\Services\\DepartmentService.cs",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAkwEMAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T12:24:11.439Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AdressesController.cs",
+              "DocumentMoniker": "E:\\3Pillars_task\\adress_book_back\\adress_book_back\\Controllers\\AdressesController.cs",
+              "RelativeDocumentMoniker": "adress_book_back\\Controllers\\AdressesController.cs",
+              "ToolTip": "E:\\3Pillars_task\\adress_book_back\\adress_book_back\\Controllers\\AdressesController.cs",
+              "RelativeToolTip": "adress_book_back\\Controllers\\AdressesController.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAA1wCUAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T12:28:16.111Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ImageHelper.cs",
+              "DocumentMoniker": "E:\\3Pillars_task\\adress_book_back\\adress_book_back\\Services\\ImageHelper.cs",
+              "RelativeDocumentMoniker": "adress_book_back\\Services\\ImageHelper.cs",
+              "ToolTip": "E:\\3Pillars_task\\adress_book_back\\adress_book_back\\Services\\ImageHelper.cs",
+              "RelativeToolTip": "adress_book_back\\Services\\ImageHelper.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAYwAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T17:28:37.996Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "20251002123107_add-addresses.cs",
+              "DocumentMoniker": "E:\\3Pillars_task\\adress_book_back\\adress_book_back\\Migrations\\20251002123107_add-addresses.cs",
+              "RelativeDocumentMoniker": "adress_book_back\\Migrations\\20251002123107_add-addresses.cs",
+              "ToolTip": "E:\\3Pillars_task\\adress_book_back\\adress_book_back\\Migrations\\20251002123107_add-addresses.cs",
+              "RelativeToolTip": "adress_book_back\\Migrations\\20251002123107_add-addresses.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T12:31:07.574Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "JobsController.cs",
+              "DocumentMoniker": "E:\\3Pillars_task\\adress_book_back\\adress_book_back\\Controllers\\JobsController.cs",
+              "RelativeDocumentMoniker": "adress_book_back\\Controllers\\JobsController.cs",
+              "ToolTip": "E:\\3Pillars_task\\adress_book_back\\adress_book_back\\Controllers\\JobsController.cs",
+              "RelativeToolTip": "adress_book_back\\Controllers\\JobsController.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAgwDQAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T12:28:17.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "E:\\3Pillars_task\\adress_book_back\\adress_book_back\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "adress_book_back\\Services\\AuthService.cs",
+              "ToolTip": "E:\\3Pillars_task\\adress_book_back\\adress_book_back\\Services\\AuthService.cs",
+              "RelativeToolTip": "adress_book_back\\Services\\AuthService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T12:24:09.519Z",
+              "EditorCaption": ""
             }
           ]
         },

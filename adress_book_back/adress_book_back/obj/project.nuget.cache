@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "sfBUiiOCf8VKoP+X0Iils2NDxGuih/6CjSArDpWr/PIx8BORYLcxLNPVpXRg1d1G4VlolIrJyRg6YOEIEa2G4A==",
+  "dgSpecHash": "6cxWt7yP3zigPsnnB/dt7Q5awpHpcYZWWeHOEsW0ezdONGWezqAnvbo7uhxrMuTY41g7TjOdlQLmKdxzBreWSw==",
   "success": true,
   "projectFilePath": "E:\\3Pillars_task\\adress_book_back\\adress_book_back\\adress_book_back.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tiba\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\tiba\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
     "C:\\Users\\tiba\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\tiba\\.nuget\\packages\\magick.net-q8-anycpu\\14.8.2\\magick.net-q8-anycpu.14.8.2.nupkg.sha512",
+    "C:\\Users\\tiba\\.nuget\\packages\\magick.net.core\\14.8.2\\magick.net.core.14.8.2.nupkg.sha512",
     "C:\\Users\\tiba\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.1\\microsoft.aspnetcore.authentication.jwtbearer.8.0.1.nupkg.sha512",
     "C:\\Users\\tiba\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0\\microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
     "C:\\Users\\tiba\\.nuget\\packages\\microsoft.build.framework\\17.8.3\\microsoft.build.framework.17.8.3.nupkg.sha512",

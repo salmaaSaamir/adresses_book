@@ -93,10 +93,11 @@ if (app.Environment.IsDevelopment())
 
 // Middleware order is important
 app.UseCors("AllowSpecificOrigin");
+app.UseStaticFiles();
+
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
-
 app.MapControllers();
 
 app.Run();

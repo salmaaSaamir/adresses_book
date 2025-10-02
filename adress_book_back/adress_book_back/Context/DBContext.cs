@@ -27,6 +27,7 @@ namespace adress_book_back.Context
         public DbSet<User> Users { get; set; }
         public DbSet<Job> Jobs { get; set; }
         public DbSet<Department> Departments { get; set; }
+        public DbSet<Adress> Addresses { get; set; }
 
 
     }

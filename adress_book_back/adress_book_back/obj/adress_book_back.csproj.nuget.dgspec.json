@@ -45,6 +45,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Magick.NET-Q8-AnyCPU": {
+              "target": "Package",
+              "version": "[14.8.2, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[8.0.1, )"

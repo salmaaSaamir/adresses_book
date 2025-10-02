@@ -107,7 +107,6 @@ export class AuthService {
 
     const expiresAt = decoded.exp * 1000;
     const timeout = expiresAt - Date.now();
-
     if (timeout > 0) {
       this.logoutTimer = setTimeout(() => {
         this.logout();

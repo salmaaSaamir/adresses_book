@@ -1,58 +1,112 @@
-<table class="table table-dark mx-auto my-5">
-  <thead>
-    <tr>
-      <th scope="col" class="opacity">#</th>
-      <th scope="col" class="opacity">full Name</th>
-      <th scope="col" class="opacity">Job Title</th>
-      <th scope="col" class="opacity">Department</th>
-      <th scope="col" class="opacity">Mobile Number</th>
-      <th scope="col" class="opacity">Date of Birth</th>
-      <th scope="col" class="opacity">Address</th>
-      <th scope="col" class="opacity">Email</th>
-      <th scope="col" class="opacity">Password</th>
-      <th scope="col" class="opacity">Photo</th>
-      <th scope="col" class="opacity">Age</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark Otto</td>
-      <td>Developer</td>
-      <td>IT</td>
-      <td>+201234567890</td>
-      <td>1990-05-15</td>
-      <td>123 Nile Street, Cairo</td>
-      <td>mark.ottoexample.com</td>
-      <td>••••••••</td>
-      <td><img src="https://via.placeholder.com/50" alt="Photo"></td>
-      <td>33</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob Thornton</td>
-      <td>Manager</td>
-      <td>HR</td>
-      <td>+201112223344</td>
-      <td>1985-11-23</td>
-      <td>45 Tahrir Square, Cairo</td>
-      <td>jacob.thorntonexample.com</td>
-      <td>••••••••</td>
-      <td><img src="https://via.placeholder.com/50" alt="Photo"></td>
-      <td>38</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry Bird</td>
-      <td>Designer</td>
-      <td>Marketing</td>
-      <td>+201098765432</td>
-      <td>1992-07-08</td>
-      <td>78 Giza Road, Giza</td>
-      <td>larry.birdexample.com</td>
-      <td>••••••••</td>
-      <td><img src="https://via.placeholder.com/50" alt="Photo"></td>
-      <td>31</td>
-    </tr>
-  </tbody>
-</table>
+<!-- Loader -->
+@if (IsSpinner) {
+<app-loader></app-loader>
+} @else {
+<div class="data-container">
+  <h2 class="text-primary my-3">Addresses</h2>
+  <!-- Search Inputs -->
+  <div class="row mb-3 d-flex flex-wrap align-items-center">
+    <!-- Main Search -->
+    <div class="col-md-4">
+      <div class="position-relative password-container">
+        <input type="text" placeholder="Search Addresses..." [(ngModel)]="searchTerm" (input)="onSearch()" class="" />
+        <i class="bi fw-bold fs-4 eye-icon bi-search"></i>
+      </div>
+    </div>
+    <!-- Date Range Search -->
+    <div class="col-md-4">
+      <div class="row d-flex flex-wrap gap-2 my-3 align-items-center">
+        <mat-form-field appearance="outline" class="col-md-8">
+          <mat-label>Enter a date range</mat-label>
+          <!-- Inputs for start and end date -->
+          <mat-date-range-input [rangePicker]="picker">
+            <input matStartDate placeholder="Start date" [(ngModel)]="startDate" (dateChange)="onSearch()">
+            <input matEndDate placeholder="End date" [(ngModel)]="endDate" (dateChange)="onSearch()">
+          </mat-date-range-input>
+          <!-- Calendar toggle icon -->
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <!-- The date range picker panel -->
+          <mat-date-range-picker #picker></mat-date-range-picker>
+        </mat-form-field>
+        <div class="col-md-3 ">
+          <button class="btn btn-outline-danger w-100" (click)="clearDateFilter()">Clear</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 d-flex justify-content-end align-items-center">
+      <button class="btn btn-success d-flex align-items-center gap-1 mx-2" (click)="ExportDataExcel()">
+        <i class="bi bi-file-earmark-spreadsheet"></i> Export Excel
+      </button>
+      <button class="btn btn-outline-info d-flex align-items-center gap-1" (click)="openModal()">
+        <i class="bi bi-plus-lg"></i> Add Address
+      </button>
+    </div>
+  </div>
+  <!-- Table -->
+  <div class="table-responsive custom-scrollbar mt-4">
+    <table class="table table-dark mx-auto">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Images</th>
+          <th>Full Name</th>
+          <th>Address Line</th>
+          <th>Email</th>
+          <th>Mobile</th>
+          <th>Age</th>
+          <th>Job</th>
+          <th>Department</th>
+          <th>Date</th>
+          <th class="text-end">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (address of pagedAddresss; track trackByAddressId($index, address)) {
+        <tr>
+          <td>{{ address.Id }}</td>
+          <td>
+            <img *ngIf="address.Photo" [src]="environment + address.Photo" alt="Image" width="40" height="40"
+              class="rounded-circle" />
+            @if (!address.Photo) {
+            <span class="text-muted">No Image</span>
+            }
+          </td>
+          <td>{{ address.FullName }}</td>
+          <td>{{ address.AddressLine }}</td>
+          <td>{{ address.Email }}</td>
+          <td>{{ address.MobileNumber }}</td>
+          <td>{{ address.Age }}</td>
+          <td>{{ address.Job?.Name }}</td>
+          <td>{{ address.Department?.Name }}</td>
+          <td>{{ address.DateOfBirth | date: 'yyyy-MM-dd' }}</td>
+          <td class="text-end">
+            <div class="d-flex flex-wrap gap-2"><button class="btn btn-sm btn-outline-secondary mx-1 iconButton" matTooltip="Edit"
+              (click)="openModal(address)">
+              <i class="bi bi-pencil"></i>
+            </button>
+            <button class="btn btn-sm btn-outline-danger mx-1 iconButton" matTooltip="Delete"
+              (click)="deleteAddress(address.Id)">
+              <i class="bi bi-trash"></i>
+            </button></div>
+          </td>
+        </tr>
+        } @empty {
+        <tr>
+          <td colspan="11" class="text-center">
+            No Addresses Found
+          </td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+  <!-- Material Paginator -->
+  <mat-paginator class="bg-dark text-white" [length]="totalCount" [pageSize]="pageSize" [pageIndex]="currentPage"
+    [pageSizeOptions]="[10, 20, 50]" (page)="onPageChange($event)">
+  </mat-paginator>
+</div>
+}
+<!-- Add Address Modal -->
+@if(IsaddAddress) {
+<app-add-address [AdressData]="currentAddress" (onCancel)="handleCancel($event)"></app-add-address>
+}
