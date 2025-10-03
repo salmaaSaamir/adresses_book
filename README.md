@@ -74,14 +74,3 @@ address-book-backend\
 3. Run Angular app: `ng serve`  
 4. Open browser at `http://localhost:4200`
 
----
-
-## 📦 Additional Notes
-
-- All static files (images) are in `wwwroot`
-- API endpoints are in `Controllers`
-- Models follow **Entity Framework Core conventions**
-- Services handle business logic and are accessed via interfaces
-- Angular services communicate with the backend via HTTP
-
----
