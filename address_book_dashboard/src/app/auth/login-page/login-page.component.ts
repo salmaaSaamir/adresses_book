@@ -44,14 +44,17 @@ export class LoginPageComponent {
 
         // set token and optionally remember
         this.authService.setToken(response.token);
-        this.IsSpinner = false;
         this.router.navigate(['/home']);
+
       } else {
         this.toastr.error('Login Failed! Please check your credentials.');
       }
     } catch (error) {
       console.error('Login error:', error);
       this.toastr.error('Something went wrong. Please try again.');
+    } finally {
+      this.IsSpinner = false;
+
     }
   }
 }

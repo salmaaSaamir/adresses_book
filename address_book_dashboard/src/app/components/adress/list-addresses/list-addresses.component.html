@@ -5,36 +5,35 @@
 <div class="data-container">
   <h2 class="text-primary my-3">Addresses</h2>
   <!-- Search Inputs -->
-  <div class="row mb-3 d-flex flex-wrap align-items-center">
+  <div class="row mb-3 g-2 align-items-center">
     <!-- Main Search -->
-    <div class="col-md-4">
-      <div class="position-relative password-container">
-        <input type="text" placeholder="Search Addresses..." [(ngModel)]="searchTerm" (input)="onSearch()" class="" />
-        <i class="bi fw-bold fs-4 eye-icon bi-search"></i>
+    <div class="col-12 col-sm-4 col-md-4">
+      <div class="position-relative">
+        <input type="text" placeholder="Search Addresses..." [(ngModel)]="searchTerm" (input)="onSearch()"
+          class="form-control" />
+        <i class="bi bi-search fw-bold fs-4 position-absolute top-50 end-0 translate-middle-y pe-3"></i>
       </div>
     </div>
     <!-- Date Range Search -->
-    <div class="col-md-4">
-      <div class="row d-flex flex-wrap gap-2 my-3 align-items-center">
-        <mat-form-field appearance="outline" class="col-md-8">
+    <div class="col-12 col-sm-5 col-md-4 d-flex gap-2 flex-wrap">
+      <div class="flex-grow-1">
+        <mat-form-field appearance="outline" class="w-100">
           <mat-label>Enter a date range</mat-label>
-          <!-- Inputs for start and end date -->
           <mat-date-range-input [rangePicker]="picker">
             <input matStartDate placeholder="Start date" [(ngModel)]="startDate" (dateChange)="onSearch()">
             <input matEndDate placeholder="End date" [(ngModel)]="endDate" (dateChange)="onSearch()">
           </mat-date-range-input>
-          <!-- Calendar toggle icon -->
           <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-          <!-- The date range picker panel -->
           <mat-date-range-picker #picker></mat-date-range-picker>
         </mat-form-field>
-        <div class="col-md-3 ">
-          <button class="btn btn-outline-danger w-100" (click)="clearDateFilter()">Clear</button>
-        </div>
+      </div>
+      <div class="d-flex align-items-center">
+        <button class="btn btn-outline-danger w-100" (click)="clearDateFilter()">Clear</button>
       </div>
     </div>
-    <div class="col-md-4 d-flex justify-content-end align-items-center">
-      <button class="btn btn-success d-flex align-items-center gap-1 mx-2" (click)="ExportDataExcel()">
+    <!-- Buttons -->
+    <div class="col-12 col-sm-3 col-md-4 d-flex flex-wrap justify-content-end gap-2">
+      <button class="btn btn-success d-flex align-items-center gap-1" (click)="ExportDataExcel()">
         <i class="bi bi-file-earmark-spreadsheet"></i> Export Excel
       </button>
       <button class="btn btn-outline-info d-flex align-items-center gap-1" (click)="openModal()">
@@ -80,14 +79,15 @@
           <td>{{ address.Department?.Name }}</td>
           <td>{{ address.DateOfBirth | date: 'yyyy-MM-dd' }}</td>
           <td class="text-end">
-            <div class="d-flex flex-wrap gap-2"><button class="btn btn-sm btn-outline-secondary mx-1 iconButton" matTooltip="Edit"
-              (click)="openModal(address)">
-              <i class="bi bi-pencil"></i>
-            </button>
-            <button class="btn btn-sm btn-outline-danger mx-1 iconButton" matTooltip="Delete"
-              (click)="deleteAddress(address.Id)">
-              <i class="bi bi-trash"></i>
-            </button></div>
+            <div class="d-flex flex-wrap gap-2"><button class="btn btn-sm btn-outline-secondary mx-1 iconButton"
+                matTooltip="Edit" (click)="openModal(address)">
+                <i class="bi bi-pencil"></i>
+              </button>
+              <button class="btn btn-sm btn-outline-danger mx-1 iconButton" matTooltip="Delete"
+                (click)="deleteAddress(address.Id)">
+                <i class="bi bi-trash"></i>
+              </button>
+            </div>
           </td>
         </tr>
         } @empty {

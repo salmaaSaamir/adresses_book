@@ -1,0 +1,84 @@
+.cdk-overlay-container {
+  z-index: 1055 !important;
+  /* Bootstrap modal default is 1050 */
+}
+.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  background-color: #2d3d4f !important;
+}
+.mat-datepicker-content-container {
+  background: #2d3d4f !important;
+}
+/* Change the day numbers text color */
+.mat-calendar-body-cell-content {
+  color: #ffffff;
+  /* your desired color */
+}
+/* Change the month/year label color in header */
+.mat-calendar-period-button,
+.mat-calendar-previous-button,
+.mat-calendar-next-button {
+  color: #ffffff;
+}
+/* Change selected date color */
+.mat-calendar-body-selected .mat-calendar-body-cell-content {
+  color: white;
+  /* text color on selected day */
+  background-color: #ff6600;
+  /* selected background */
+}
+/* Change today's date color */
+.mat-calendar-body-today:not(.mat-calendar-body-selected) .mat-calendar-body-cell-content {
+  color: #00aa00;
+}
+.mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-text-field__input {
+  color: #fff !important;
+}
+.mat-calendar-table-header th {
+  color: #fff !important;
+}
+.mat-calendar-body-label {
+  color: #fff !important;
+}
+.mat-calendar-body-cell-content {
+  color: #fff !important;
+}
+.mat-calendar-period-button,
+.mat-calendar-previous-button,
+.mat-calendar-next-button {
+  color: #fff !important;
+}
+.mat-calendar-arrow {
+  fill: #fff !important;
+}
+tr {
+  vertical-align: middle !important;
+}
+.mat-mdc-form-field:not(.mat-form-field-disabled) .mat-mdc-floating-label.mdc-floating-label {
+  color: white !important;
+}
+.mat-mdc-form-field-has-icon-suffix .mat-mdc-text-field-wrapper {
+  padding: 5px !important;
+  border: none !important;
+  ;
+}
+.mat-mdc-form-field-subscript-wrapper,
+.mat-mdc-form-field-bottom-align::before {
+  display: none !important;
+}
+.mat-date-range-input-inner {
+  color: #fff !important;
+}
+.mat-mdc-form-field-has-icon-suffix .mat-mdc-text-field-wrapper {
+  padding: 5px !important;
+  border: 1px solid rgba(255, 255, 255, 0.32) !important;
+}
+.mdc-icon-button {
+  background-color: #0dcaf096 !important;
+  margin: 5px !important;
+}
+.mat-mdc-select-trigger {
+  color: white !important;
+}
+.mat-mdc-select-arrow svg {
+  color: white !important;
+}

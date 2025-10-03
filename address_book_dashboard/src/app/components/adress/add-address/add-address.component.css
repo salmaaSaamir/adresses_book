@@ -1,0 +1,17 @@
+.position-relative {
+  position: relative;
+}
+
+.selected-value {
+  position: absolute;
+  top: 50%;
+  left: 12px; /* same padding as ng-select input */
+  transform: translateY(-50%);
+  pointer-events: none; /* so it doesn't block clicking the select */
+  font-size: 0.9rem;
+  color: #fefefe;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: calc(100% - 24px); /* prevent overflow */
+}

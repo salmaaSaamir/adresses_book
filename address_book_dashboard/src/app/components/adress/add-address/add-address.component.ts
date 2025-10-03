@@ -17,8 +17,6 @@ import { MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatIconModule } from '@angular/material/icon';
-
-
 @Component({
   selector: 'app-add-address',
   standalone: true,
@@ -31,7 +29,8 @@ import { MatIconModule } from '@angular/material/icon';
     MatFormFieldModule,
     MatInputModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    LoaderComponent
   ],
   templateUrl: './add-address.component.html',
   styleUrls: ['./add-address.component.css']
@@ -45,7 +44,6 @@ export class AddAddressComponent {
   IsSpinner = false;
   jobs: Job[] = [];
   departments: Department[] = [];
-
   constructor(
     private fb: FormBuilder,
     private addressService: AddressService,
@@ -55,12 +53,10 @@ export class AddAddressComponent {
   ) {
     this.form = this.createForm();
   }
-
-  ngOnInit() {
-    this.loadDepartments();
-    this.loadJobs();
+  async ngOnInit() {
+    await this.loadDepartments();
+    await this.loadJobs();
   }
-
   private createForm(): FormGroup {
     return this.fb.group({
       Id: [0],
@@ -75,7 +71,6 @@ export class AddAddressComponent {
       DepartmentId: [null, Validators.required]
     });
   }
-
   async loadDepartments() {
     try {
       const res: any = await lastValueFrom(this.departmentService.getAllDepartments());
@@ -87,32 +82,27 @@ export class AddAddressComponent {
       console.error(error);
     }
   }
-
   async loadJobs() {
     try {
       const res: any = await lastValueFrom(this.jobsService.getAllJobs());
       if (res.State && res.Data && res.Data.length > 0) {
-        this.jobs = res.Data[0]; // Ensure array
+        this.jobs = res.Data[0];
       }
     } catch (error) {
       this.toastr.error('Failed to load jobs');
       console.error(error);
     }
   }
-
   ngOnChanges(changes: SimpleChanges) {
     if (changes['AdressData'] && this.AdressData) {
       const formData: any = { ...this.AdressData };
-
       // Patch DateOfBirth as Date object
       if (formData.DateOfBirth) {
         formData.DateOfBirth = new Date(formData.DateOfBirth);
       }
-
       this.form.patchValue(formData);
     }
   }
-
   ngAfterViewInit() {
     setTimeout(() => {
       const modalElement = document.getElementById('addAdressModal');
@@ -124,28 +114,22 @@ export class AddAddressComponent {
       }
     });
   }
-
   openModal() {
     this.modalInstance?.show();
   }
-
   cancel() {
     this.modalInstance?.hide();
     this.onCancel.emit(new Address());
   }
-
   async save() {
     if (this.form.invalid) {
       this.form.markAllAsTouched();
       this.toastr.warning('Please fill all required fields correctly');
       return;
     }
-
     this.IsSpinner = true;
-
     try {
       const addressData = { ...this.form.value };
-
       // Ensure DateOfBirth is a Date object
       if (addressData.DateOfBirth) {
         addressData.DateOfBirth = new Date(addressData.DateOfBirth);
@@ -165,7 +149,6 @@ export class AddAddressComponent {
       this.IsSpinner = false;
     }
   }
-
   // File upload to Base64
   onFileSelected(event: Event) {
     const input = event.target as HTMLInputElement;
@@ -179,12 +162,10 @@ export class AddAddressComponent {
       reader.readAsDataURL(file);
     }
   }
-
   isFieldInvalid(fieldName: string): boolean {
     const field = this.form.get(fieldName);
     return !!(field && field.invalid && field.touched);
   }
-
   getFieldError(fieldName: string): string {
     const field = this.form.get(fieldName);
     if (!field?.errors) return '';
@@ -197,5 +178,14 @@ export class AddAddressComponent {
   togglePassword(): void {
     this.showPassword = !this.showPassword;
   }
+  // Add a proper type for the event
+  selctedJob = ''
+  selectedJDep = ''
 
+  onJobChange(selectedJob: Job) {
+    this.selctedJob = selectedJob.Name;
+  }
+  onDeptChange(selectedJDep: Department) {
+    this.selectedJDep = selectedJDep.Name;
+  }
 }

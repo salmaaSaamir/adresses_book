@@ -4,12 +4,10 @@ a {
     color: #101d2c;
     /* accent color */
 }
-
 /* Headings */
 h1 {
     font-size: 2.5rem;
 }
-
 /* Layout */
 .container {
     display: flex;
@@ -17,12 +15,10 @@ h1 {
     align-items: center;
     height: 100vh;
 }
-
 .login-container {
     position: relative;
     width: 22.2rem;
 }
-
 /* Form Styles */
 .form-container {
     border: 1px solid rgba(255, 255, 255, 0.15);
@@ -32,8 +28,7 @@ h1 {
     padding: 2rem;
     z-index: 1;
 }
-
-.login-container form input{
+.login-container form input {
     display: block;
     width: 100%;
     padding: 14.5px;
@@ -49,12 +44,10 @@ h1 {
     backdrop-filter: blur(15px);
     transition: box-shadow 0.3s ease;
 }
-
 .login-container form input:focus {
     box-shadow: 0 0 16px 1px rgba(255, 198, 101, 0.5);
     animation: wobble 0.3s ease-in;
 }
-
 .login-container form button {
     width: 100%;
     padding: 13px;
@@ -69,16 +62,19 @@ h1 {
     margin-bottom: 2rem;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-
 .login-container form button:hover {
     transform: scale(1.02);
     box-shadow: 0 0 10px 1px rgba(255, 198, 101, 0.4);
 }
 .login-container form button:disabled {
-    opacity: 0.9; /* same as normal opacity */
-    cursor: no-drop; /* keep no-drop instead of default not-allowed */
-    transform: none; /* maintain original transform */
-    box-shadow: none; /* optional, keep shadow consistent */
+    opacity: 0.9;
+    /* same as normal opacity */
+    cursor: no-drop;
+    /* keep no-drop instead of default not-allowed */
+    transform: none;
+    /* maintain original transform */
+    box-shadow: none;
+    /* optional, keep shadow consistent */
 }
 /* Circles & Illustration */
 .circle {
@@ -88,28 +84,24 @@ h1 {
     border-radius: 50%;
     position: absolute;
 }
-
 .circle-one {
     top: 0;
     left: 0;
     z-index: -1;
     transform: translate(-45%, -45%);
 }
-
 .circle-two {
     bottom: 0;
     right: 0;
     z-index: -1;
     transform: translate(45%, 45%);
 }
-
 .illustration {
     position: absolute;
     top: -14%;
     right: -2px;
     width: 90%;
 }
-
 /* Links below form */
 .register {
     width: 100%;
@@ -125,27 +117,22 @@ h1 {
     text-align: center !important;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-
 .opacity {
     opacity: 0.9;
 }
-
 /* Theme button */
 .theme-btn-container {
     position: absolute;
     left: 0;
     bottom: 2rem;
 }
-
 .theme-btn {
     cursor: pointer;
     transition: all 0.3s ease-in;
 }
-
 .theme-btn:hover {
     width: 40px !important;
 }
-
 .eye-icon {
     color: #101d2c !important;
     position: absolute;
@@ -154,37 +141,14 @@ h1 {
     transform: translateY(-50%);
     cursor: pointer;
 }
-
 /* Animation */
 @keyframes wobble {
-
     0%,
     75% {
         transform: scale(1.025);
     }
-
     25%,
     100% {
         transform: scale(1);
     }
-}
-
-input{
-    display: block;
-    width: 100%;
-    padding: 14.5px;
-    margin: 2rem 0;
-    font-size: 15px;
-    font-weight: 500;
-    letter-spacing: 0.8px;
-    color: #ffffff;
-    background-color: rgba(255, 255, 255, 0.12);
-    border: none;
-    border-radius: 5px;
-    outline: none;
-    backdrop-filter: blur(15px);
-    transition: box-shadow 0.3s ease;
-}input:focus {
-    box-shadow: 0 0 16px 1px rgba(255, 198, 101, 0.5);
-    animation: wobble 0.3s ease-in;
 }

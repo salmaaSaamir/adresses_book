@@ -8,6 +8,7 @@ export const routes: Routes = [
       import('./auth/login-page/login-page.component').then(
         (m) => m.LoginPageComponent
       ),
+    title: 'Login'
   },
   {
     path: 'register',
@@ -15,6 +16,7 @@ export const routes: Routes = [
       import('./auth/register-page/register-page.component').then(
         (m) => m.RegisterPageComponent
       ),
+    title: 'Register'
   },
   {
     path: 'home',
@@ -27,24 +29,29 @@ export const routes: Routes = [
       {
         path: '',
         loadComponent: () =>
-          import('./components/adress/list-addresses/list-addresses.component').then((m) => m.ListAddressesComponent),
-      }, {
-        path: 'jobs',
-        loadComponent: () =>
           import('./components/job/lis-jobs/lis-jobs.component').then((m) => m.LisJobsComponent),
+        title: 'Dashboard-Jobs'
       }, {
         path: 'depts',
         loadComponent: () =>
           import('./components/department/list-departments/list-departments.component').then((m) => m.ListDepartmentsComponent),
-      }
+        title: 'Dashboard-Depts'
+      },
+       {
+        path: 'addresses',
+        loadComponent: () =>
+          import('./components/adress/list-addresses/list-addresses.component').then((m) => m.ListAddressesComponent),
+        title: 'Dashboard-Addresses'
+      },
     ],
 
   },
   {
     path: '**', loadComponent: () =>
-      import('./auth/not-found/not-found.component').then(
+      import('./shared/not-found/not-found.component').then(
         (m) => m.NotFoundComponent
       ),
+    title: 'Page Not Found'
   },
 ];
 

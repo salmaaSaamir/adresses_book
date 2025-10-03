@@ -1,34 +1,34 @@
-<nav class="navbar px-5 justify-content-between navbar-expand-lg navbar-dark bg-dark">
-  <img routerLink="/home" class="m-3 rounded-circle shadow" src="assets/images/logo.webp" width="60" height="60" />
-<button
-  class="navbar-toggler"
-  type="button"
-  data-bs-toggle="collapse"
-  data-bs-target="#navbarSupportedContent"
-  aria-controls="navbarSupportedContent"
-  aria-expanded="false"
-  aria-label="Toggle navigation"
->
-  <span class="navbar-toggler-icon"></span>
-</button>
+<nav class="navbar px-4 navbar-expand-lg navbar-dark bg-dark">
+  <!-- Logo -->
+  <a class="navbar-brand d-flex align-items-center" routerLink="/home" (click)="closeMenu()">
+    <img src="assets/images/logo.webp" alt="Logo" class="rounded-circle shadow me-2" width="50" height="50" />
+    <span class="fw-bold text-light d-none d-md-inline">Dashboard</span>
+  </a>
+
+  <!-- Toggler -->
+  <button class="navbar-toggler" type="button" (click)="toggleMenu()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar Content -->
+<div class="collapse navbar-collapse justify-content-end gap-4 fs-5"
+     [class.show]="isMenuOpen" id="navbarNav">
 
 
-  <div class="collapse navbar-collapse justify-content-end gap-5 fs-5" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto gap-4">
-      <li class="nav-item ">
-        <a class="nav-link" routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Address </a>
+    <ul class="navbar-nav me-auto gap-3">
+      <li class="nav-item my-2" *ngFor="let link of navLinks">
+        <a class="nav-link"
+           [routerLink]="link.path"
+           routerLinkActive="active"
+           [routerLinkActiveOptions]="{ exact: true }"
+           (click)="closeMenu()">
+          {{ link.label }}
+        </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/home/jobs" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Jobs</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/home/depts" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Departments</a>
-      </li>
-       
     </ul>
-    <button class="btn btn-outline-warning my-2 my-sm-0" (click)="LogOut()"><i
-      class="bi bi-box-arrow-left mx-2"></i> Log Out</button>
-  </div>
- 
 
+    <button class="btn btn-outline-warning" (click)="LogOut()">
+      <i class="bi bi-box-arrow-left me-2"></i> Log Out
+    </button>
+  </div>
 </nav>

@@ -10,7 +10,7 @@ import { ToastrService } from 'ngx-toastr';
 import { AddressService } from '../../../core/services/AddressService';
 import { lastValueFrom } from 'rxjs';
 import Swal from 'sweetalert2';
-import { environment } from '../../../../environment/environment';
+import { environment } from '../../../../environments/environment';
 import * as XLSX from 'xlsx';
 import { DatePipe } from '@angular/common';
 import { MatNativeDateModule } from '@angular/material/core';
@@ -148,8 +148,6 @@ export class ListAddressesComponent {
   }
 
 openModal(address?: Address) {
-  console.log('Opening modal for address:', address);
-
   if (address) {
     const { Age, ...rest } = address; // exclude Age
     this.currentAddress = Object.assign(new Address(), rest);
@@ -170,12 +168,11 @@ openModal(address?: Address) {
   // Apply Address changes to the local arrays
   private applyAddressChanges(savedAddress: Address) {
     const index = this.Addresss.findIndex(d => d.Id === savedAddress.Id);
-    
     if (savedAddress.Id !== 0) {
       if (index > -1) {
         // Update existing address
         Object.assign(this.Addresss[index], savedAddress);
-      } else {
+      } else if(savedAddress.Id) {
         // Add new address
         this.Addresss.push(savedAddress); // Add to beginning
         this.totalCount++;

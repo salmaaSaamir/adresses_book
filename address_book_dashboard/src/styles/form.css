@@ -1,0 +1,82 @@
+input,
+.form-control,
+.form-select.custom-select {
+    display: block;
+    width: 100%;
+    padding: 14.5px;
+    margin: 2rem 0;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    color: #ffffff;
+    background-color: #ffffff1f;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    backdrop-filter: blur(15px);
+    transition: box-shadow 0.3s ease;
+}
+.form-select.custom-select option {
+    background-color: #102237 !important;
+    color: #fff;
+}
+input:focus,
+.form-control:focus,
+.form-select.custom-select:focus {
+    box-shadow: 0 0 16px 1px rgba(255, 198, 101, 0.5);
+    background-color: #FFFFFF1E;
+    animation: wobble 0.3s ease-in;
+}
+input::placeholder {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.468) !important;
+}
+.form-control:focus {
+    color: white !important;
+  
+}
+
+
+.form-control.is-invalid, .was-validated .form-control:invalid {
+
+    background-image: none !important;
+
+}
+/* ng-select */
+.ng-select.ng-select-opened .ng-select-container {
+  background: #2d3d4f !important;
+}
+
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option {
+  background-color: #2d3d4f !important;
+}
+
+.ng-select .ng-select-container {
+  color: white;
+  background: #2d3d4f !important;
+  border: none !important;
+}
+
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-marked {
+  background-color: #f5faff;
+  color: #ffc107 !important;
+}
+
+.ng-dropdown-panel {
+  border: 1px solid rgba(0, 0, 0, 0.54) !important;
+  padding: 0px 5px;
+  background: #2d3d4f;
+}
+
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option {
+  background-color: #fff;
+  color: #f8f9fa;
+  border-bottom: 1px solid #0dcaf057 !important;
+  padding: 8px 10px;
+}
+
+.cdk-overlay-container {
+  z-index: 1055 !important;
+  /* Bootstrap modal default is 1050 */
+}

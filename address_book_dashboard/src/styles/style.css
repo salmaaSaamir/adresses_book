@@ -1,0 +1,37 @@
+@import './auth.css'; 
+@import './form.css'; 
+@import './matrialOverride.css'; 
+@import './table.css'; 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  text-transform: capitalize;
+}
+body {
+  font-family: "Math", sans-serif;
+  background: #101d2c;
+  color: #ffffff;
+  letter-spacing: 1px;
+  transition: background 0.2s ease;
+}
+.text-primary {
+  color: #ffc665 !important;
+}
+img {
+  object-fit: cover;
+}
+.data-container {
+  width: 94% !important;
+  margin: 20px auto;
+}
+.opacity {
+  opacity: 0.9;
+}
+.bg-dark {
+  background-color: rgb(16 34 55) !important;
+}

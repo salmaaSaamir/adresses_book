@@ -3,33 +3,30 @@
 @if (IsSpinner) {
 <app-loader></app-loader>
 } @else {
-
 <div class="data-container">
     <h2 class="text-primary my-3">Jobs</h2>
-
     <!-- Search Input -->
     <div class="row mb-3 d-flex flex-wrap justify-content-end">
         <div class="col-md-6">
-            <div class="position-relative password-container">
-                <input type="text" placeholder="SearchJobs" [(ngModel)]="searchTerm" (input)="onSearch()" />
-                <i class="bi fw-bold fs-4 eye-icon bi-search"></i>
+            <div class="position-relative">
+                <input type="text" placeholder="Search Job..." [(ngModel)]="searchTerm" (input)="onSearch()"
+                    class="form-control" />
+                <i class="bi bi-search fw-bold fs-4 position-absolute top-50 end-0 translate-middle-y pe-3"></i>
             </div>
         </div>
-
         <div class="d-flex justify-content-end align-items-center mb-3 w-50">
             <button class="btn btn-outline-info d-flex align-items-center gap-1" (click)="openModal()">
-                <i class="bi bi-plus-lg"></i> AddJob
+                <i class="bi bi-plus-lg"></i> Add Job
             </button>
         </div>
     </div>
-
     <!-- Table -->
     <div class="table-responsive mt-4">
         <table class="table table-dark mx-auto ">
             <thead>
                 <tr>
                     <th>#</th>
-                    <th >Name</th>
+                    <th>Name</th>
                     <th class="text-end">Actions</th>
                 </tr>
             </thead>
@@ -39,7 +36,8 @@
                     <td>{{ job.Id }}</td>
                     <td>{{ job.Name }}</td>
                     <td class="text-end">
-                        <button class="btn btn-sm btn-outline-secondary mx-3 iconButton" matTooltip="Edit"
+                        <div class="d-flex gap-2 align-items-center justify-content-center flex-wrap">
+                            <button class="btn btn-sm btn-outline-secondary mx-3 iconButton" matTooltip="Edit"
                             (click)="openModal(job)">
                             <i class="bi bi-pencil fs-5"></i>
                         </button>
@@ -47,6 +45,7 @@
                             (click)="deleteJob(job.Id)">
                             <i class="bi bi-trash fs-5"></i>
                         </button>
+                        </div>
                     </td>
                 </tr>
                 } @empty {
@@ -59,16 +58,11 @@
             </tbody>
         </table>
     </div>
-
     <!-- Material Paginator -->
-    <mat-paginator class="bg-dark text-white" [length]="totalCount"
-                   [pageSize]="pageSize"
-                   [pageIndex]="currentPage"
-                   [pageSizeOptions]="[10, 20, 50]"
-                   (page)="onPageChange($event)">
+    <mat-paginator class="bg-dark text-white" [length]="totalCount" [pageSize]="pageSize" [pageIndex]="currentPage"
+        [pageSizeOptions]="[10, 20, 50]" (page)="onPageChange($event)">
     </mat-paginator>
 </div>
-
 <!-- Add Job Modal -->
 @if(IsaddJob) {
 <app-add-job [jobData]="currentJob" (onCancel)="handleCancel($event)"></app-add-job>
